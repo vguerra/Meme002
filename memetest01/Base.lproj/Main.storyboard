@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cD3-eW-fQu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cD3-eW-fQu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -129,6 +129,7 @@
                         <viewControllerLayoutGuide type="bottom" id="kgd-HK-yVH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="I66-ms-UlR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MR2-qr-bqY">
@@ -145,7 +146,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="188" height="182"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cx2-UA-1FL">
@@ -177,6 +178,39 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 </variation>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7zr-35-m1s">
+                                <rect key="frame" x="0.0" y="20" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="voT-7B-skr">
+                                    <size key="itemSize" width="134" height="107"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="D5G-mt-VrV" customClass="MemeCollectionViewCell" customModule="memetest01" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="134" height="107"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ThS-eQ-Fhf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="134" height="107"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="memedImage" destination="ThS-eQ-Fhf" id="jkD-au-cLf"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="hP2-Ba-JA4" id="NaA-K9-fPc"/>
+                                    <outlet property="delegate" destination="hP2-Ba-JA4" id="f4B-Tf-kO2"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -301,25 +335,25 @@
                                 <exclude reference="EtD-88-bsX"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1I7-Lz-efJ"/>
-                                <exclude reference="VSH-br-XfE"/>
-                                <exclude reference="Y3P-WP-bcM"/>
                                 <exclude reference="0nz-I1-waw"/>
                                 <exclude reference="28A-BI-9Q2"/>
                                 <exclude reference="IIO-EO-hry"/>
                                 <exclude reference="kkG-o5-xzb"/>
                                 <exclude reference="mCy-tf-jbV"/>
+                                <exclude reference="3fA-GZ-g9j"/>
+                                <exclude reference="8FM-Bb-II7"/>
+                                <exclude reference="9b6-ai-Dr0"/>
+                                <exclude reference="O8W-ya-Abc"/>
+                                <exclude reference="b4x-g5-CkK"/>
+                                <exclude reference="1I7-Lz-efJ"/>
+                                <exclude reference="VSH-br-XfE"/>
+                                <exclude reference="Y3P-WP-bcM"/>
                                 <exclude reference="7D5-S8-hFm"/>
                                 <exclude reference="Ckv-vA-wdb"/>
                                 <exclude reference="2mQ-h1-Z6c"/>
                                 <exclude reference="EFt-Xa-MmT"/>
                                 <exclude reference="alc-Zx-eEd"/>
                                 <exclude reference="swJ-h6-PDT"/>
-                                <exclude reference="3fA-GZ-g9j"/>
-                                <exclude reference="8FM-Bb-II7"/>
-                                <exclude reference="9b6-ai-Dr0"/>
-                                <exclude reference="O8W-ya-Abc"/>
-                                <exclude reference="b4x-g5-CkK"/>
                                 <exclude reference="kZF-PN-fLk"/>
                             </mask>
                         </variation>
@@ -331,25 +365,25 @@
                                 <include reference="EtD-88-bsX"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1I7-Lz-efJ"/>
-                                <include reference="VSH-br-XfE"/>
-                                <include reference="Y3P-WP-bcM"/>
                                 <include reference="0nz-I1-waw"/>
                                 <include reference="28A-BI-9Q2"/>
                                 <include reference="IIO-EO-hry"/>
                                 <include reference="kkG-o5-xzb"/>
                                 <include reference="mCy-tf-jbV"/>
+                                <include reference="3fA-GZ-g9j"/>
+                                <include reference="8FM-Bb-II7"/>
+                                <include reference="9b6-ai-Dr0"/>
+                                <include reference="O8W-ya-Abc"/>
+                                <include reference="b4x-g5-CkK"/>
+                                <include reference="1I7-Lz-efJ"/>
+                                <include reference="VSH-br-XfE"/>
+                                <include reference="Y3P-WP-bcM"/>
                                 <include reference="7D5-S8-hFm"/>
                                 <include reference="Ckv-vA-wdb"/>
                                 <include reference="2mQ-h1-Z6c"/>
                                 <include reference="EFt-Xa-MmT"/>
                                 <include reference="alc-Zx-eEd"/>
                                 <include reference="swJ-h6-PDT"/>
-                                <include reference="3fA-GZ-g9j"/>
-                                <include reference="8FM-Bb-II7"/>
-                                <include reference="9b6-ai-Dr0"/>
-                                <include reference="O8W-ya-Abc"/>
-                                <include reference="b4x-g5-CkK"/>
                                 <include reference="kZF-PN-fLk"/>
                             </mask>
                         </variation>

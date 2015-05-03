@@ -23,11 +23,12 @@ class MemeCollectionViewController: UIViewController, UICollectionViewDataSource
     }
 
      func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        println("calling count \(self.memes.count)")
         return self.memes.count
     }
 
      func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
+        println("cell for item at index \(indexPath.row)")
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MemeCollectionViewCell", forIndexPath: indexPath) as! MemeCollectionViewCell
         
         let meme = self.memes[indexPath.row]
@@ -35,7 +36,7 @@ class MemeCollectionViewController: UIViewController, UICollectionViewDataSource
 //        cell.topCellText.text = meme.textTop
 //        cell.bottomText.text = meme.textBottom
           cell.memedImage = meme.memedImage
-
+        println(meme)
         return cell
     }
     
